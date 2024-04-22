@@ -1,0 +1,20 @@
+<form>
+  <label>Tiene carnet?</label>
+  <br />
+  <input type="radio" name="respuesta"  [(ngModel)]="respuesta" [value]="true"  />
+  <label>Si</label>
+  <input type="radio" name="respuesta" [(ngModel)]="respuesta" [value]="false"  />
+  <label>No</label>
+  <br />
+  <div *ngIf="respuesta">
+    <label>Fecha de expedicion:</label>
+    <input type="date" />
+    <br />
+    <label>Dni del propietario:</label>
+    <input type="text" />
+    <p>Carnet valido en:</p>
+    <ul>
+      <li *ngFor="let item of paises;">{{item}}</li>
+    </ul>
+  </div>
+</form>

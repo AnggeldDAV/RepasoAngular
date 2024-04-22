@@ -1,0 +1,28 @@
+<form>
+  <label>Tienes carnet?</label>
+  <br />
+  <input type="radio" name="respuesta" [(ngModel)]="respuesta" [value]="true" />
+  <label>Si</label>
+  <input type="radio" name="respuesta" [(ngModel)]="respuesta" [value]="false" />
+  <label>No</label>
+  <br />
+  <div *ngIf="respuesta">
+    <label>Fecha de expedicion:</label>
+    <input type="date" />
+    <br />
+    <label>Dni del propietario:</label>
+    <input type="text" />
+    <p>Carnet valido en:</p>
+    <ul>
+      <li *ngFor="let item of paises;">{{item}}</li>
+    </ul>
+    <label>¿Cuantos días llevas el carnet?</label>
+    <input type="number" name="dias" [(ngModel)]="dias" />
+    <br />
+    <img *ngIf="dias > 0 && dias < 100" src="../assets/img/malo.jpg" alt="malo" />
+    <img *ngIf="dias >= 100 && dias <= 365" src="../assets/img/malo2.jpg" alt="malo2" />
+    <img *ngIf="dias > 365 && dias < 1000" src="../assets/img/mate.jpg" alt="mate" />
+    <img *ngIf="dias >= 1000" src="../assets/img/rayo.jpg" alt="rayo" />
+  </div>
+
+</form>

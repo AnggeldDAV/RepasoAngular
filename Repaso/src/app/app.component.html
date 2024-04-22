@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="nombre"/>
+<input type="button" (click)="clicked = true;" value="pulsa"/>
+<br />
+<input *ngIf="clicked" type="text"value={{calculaLong()}} disabled/>

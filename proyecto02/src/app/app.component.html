@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="nombre1"/>
+<br>
+<input type="text" [(ngModel)]="nombre2"/>
+<br>
+<input type="button" value="pulsa" (click)="clicked=true;"/>
+<br />
+<input *ngIf="clicked" type="text" value={{letrasIguales()}} disabled/>
+
