@@ -1,0 +1,11 @@
+<label>Introduzca un numero: </label>
+<input type="number" [(ngModel)]="numero"/>
+<br />
+<input type="radio" name="servicio" [(ngModel)]="valorRadio" value="circulo"/>
+<label>Circulo</label>
+<input type="radio" name="servicio" [(ngModel)]="valorRadio" value="cuadrado"/>
+<label>Cuadrado</label>
+<br />
+<input type="button" (click)="muestra()" value="Calcula"/>
+<p>{{mensaje}}</p>
+
