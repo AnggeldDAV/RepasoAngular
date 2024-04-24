@@ -1,0 +1,13 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jacquarda+Bastarda+9+Charted&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form>
+    <label>Introduce un nombre: </label>
+    <input type="text" name="nombre" [(ngModel)]="nombre"/>
+    <input type="button" (click)="valida()" value="pulsa" />
+  </form>
+  <p>{{mensaje | uppercase}}</p>
+  </body>
