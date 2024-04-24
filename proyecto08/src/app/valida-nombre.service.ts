@@ -4,16 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ValidaNombreService {
-  longitud(nombre:string):boolean {
-    return (nombre.length >= 3 && nombre.length <= 50);
-  }
-  caracteresEspeciales(nombre: string): boolean {
-    return false;
-  }
   isValid(nombre: string): boolean {
-    return (this.longitud(nombre) && this.caracteresEspeciales(nombre));
+    let expresion = RegExp("[a-zA-Z ]{3,50}");
+    if (expresion.test(nombre)) {
+      return true;
+    } else {
+      return false
+    }
   }
-
-
   constructor() { }
 }
