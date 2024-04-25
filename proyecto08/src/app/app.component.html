@@ -10,6 +10,6 @@
     <input type="button" (click)="valida(); pulsado=true" value="pulsa" />
   </form>
   <!--<p>{{mensaje | uppercase}}</p>-->
-  <p *ngIf="(this.validador.isValid(this.nombre)) && pulsado" class="valido">{{mensaje | uppercase}}</p>
-  <p *ngIf="!(this.validador.isValid(this.nombre)) && pulsado"class="invalido">{{mensaje | uppercase}}</p>
+  <p *ngIf="(this.validador.isValid(this.nombre)) && pulsado" >{{mensaje | uppercase}}</p>
+  <p *ngIf="!(this.validador.isValid(this.nombre)) && pulsado">{{mensaje | uppercase}}</p>
 </body>
