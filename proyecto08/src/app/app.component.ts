@@ -9,13 +9,14 @@ import { ValidaNombreService } from './valida-nombre.service'
 export class AppComponent {
   nombre: string = "";
   mensaje: string = "";
-  Validador: ValidaNombreService;
+  validador: ValidaNombreService;
+  pulsado: boolean = false;
 
-  constructor(ValNombre: ValidaNombreService) {
-    this.Validador = ValNombre;
+  constructor(valNombre: ValidaNombreService) {
+    this.validador = valNombre;
   }
   valida() {
-    if (this.Validador.isValid(this.nombre)) {
+    if (this.validador.isValid(this.nombre)) {
       return this.mensaje = `${this.nombre} es valido y correcto`;
     } else {
       return this.mensaje = `${this.nombre} no es valido y es incorrecto`;
